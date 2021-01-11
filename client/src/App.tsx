@@ -1,11 +1,17 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+//! Pages
+import MainPage from "./Pages/MainPage";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Tube</h1>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={() => <MainPage />} />
+      </Switch>
+    </Router>
   );
 }
 
