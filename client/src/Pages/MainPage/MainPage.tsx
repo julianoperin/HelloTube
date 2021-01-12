@@ -6,8 +6,13 @@ import "./MainPage.css";
 const MainPage = () => {
   return (
     <div className="MainPage">
-      <Navbar />
-      <Sidebar />
+      <div className="top">
+        <Navbar />
+      </div>
+      <div className="center">
+        <Sidebar />
+        <div className="videoView"></div>
+      </div>
     </div>
   );
 };

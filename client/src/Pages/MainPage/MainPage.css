@@ -1,2 +1,25 @@
 .MainPage {
+  width: 100%;
+  height: 100vh;
+}
+
+.top {
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  border: 1px solid gray;
+}
+
+.center {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid gray;
+}
+
+.videoView {
+  width: 100%;
+  height: 100%;
+  border: 1px solid gray;
 }
