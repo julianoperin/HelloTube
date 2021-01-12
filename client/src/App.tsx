@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 //! Pages
-import MainPage from "./Pages/MainPage";
+import MainPage from "./Pages/MainPage/MainPage";
 
 function App() {
   return (
