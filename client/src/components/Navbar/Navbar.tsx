@@ -1,11 +1,8 @@
 import React from "react";
+import "./Navbar.css";
 
-const Navbar = () => {
-  return (
-    <div>
-      <h1>navbar</h1>
-    </div>
-  );
+const Navbar: React.FC = () => {
+  return <div className="navbarContainer"></div>;
 };
 
 export default Navbar;
