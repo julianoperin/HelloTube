@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 
 import { FaYoutube } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar: React.FC = () => {
@@ -14,7 +15,12 @@ const Navbar: React.FC = () => {
         <FaYoutube id="youtubeIcon" />
         <h1>Hellotube</h1>
       </div>
-      <div className="center"></div>
+      <div className="center">
+        <input type="text" className="searchBar" placeholder="Search" />
+        <button className="btn-search">
+          <FaSearch />
+        </button>
+      </div>
       <div className="right"></div>
     </div>
   );

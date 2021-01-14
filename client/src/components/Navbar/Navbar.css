@@ -23,10 +23,6 @@
   font-size: 1.7rem;
 }
 
-.navbarContainer .center {
-  flex: 33%;
-}
-
 .navbarContainer .right {
   flex: 33%;
 }
@@ -54,4 +50,31 @@ h1 {
   font-family: "Roboto", sans-serif;
   color: #111;
   margin: 0 0.3rem;
+}
+/* CEnter */
+
+.navbarContainer .center {
+  flex: 33%;
+  display: flex;
+  align-items: center;
+}
+
+.navbarContainer .center .searchBar {
+  width: 80%;
+  height: 37px;
+  border-right: none;
+  padding: 0.4rem;
+  font-size: 1rem;
+}
+
+.navbarContainer .center .btn-search {
+  height: 37px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  background: #f5f5f5;
+}
+
+input:focus,
+button:focus {
+  outline: none;
 }
