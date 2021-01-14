@@ -23,10 +23,6 @@
   font-size: 1.7rem;
 }
 
-.navbarContainer .right {
-  flex: 33%;
-}
-
 .btn-burger {
   background: transparent;
   border: none;
@@ -77,4 +73,30 @@ h1 {
 input:focus,
 button:focus {
   outline: none;
+}
+
+/* Right */
+.navbarContainer .right {
+  flex: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+
+.navbarContainer .right .create-video {
+  font-size: 2.5rem;
+  background: transparent;
+  margin: 0.6rem 1.5rem 0 0;
+  border: none;
+  cursor: pointer;
+}
+
+.navbarContainer .right .profile-pic {
+  border: none;
+  background: gray;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
 }

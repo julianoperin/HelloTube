@@ -4,6 +4,7 @@ import "./Navbar.css";
 import { FaYoutube } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { MdAddToQueue } from "react-icons/md";
 
 const Navbar: React.FC = () => {
   return (
@@ -21,7 +22,12 @@ const Navbar: React.FC = () => {
           <FaSearch />
         </button>
       </div>
-      <div className="right"></div>
+      <div className="right">
+        <button className="create-video">
+          <MdAddToQueue />
+        </button>
+        <button className="profile-pic"></button>
+      </div>
     </div>
   );
 };
