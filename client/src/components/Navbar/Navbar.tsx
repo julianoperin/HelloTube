@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 
 import { FaYoutube } from "react-icons/fa";
@@ -7,6 +7,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdAddToQueue } from "react-icons/md";
 
 const Navbar: React.FC = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+
   return (
     <div className="navbarContainer">
       <div className="left">
@@ -26,7 +28,11 @@ const Navbar: React.FC = () => {
         <button className="create-video">
           <MdAddToQueue />
         </button>
-        <button className="profile-pic"></button>
+        {loggedIn ? (
+          <button className="profile-pic"></button>
+        ) : (
+          <button className="signIn-btn">Sign In</button>
+        )}
       </div>
     </div>
   );
