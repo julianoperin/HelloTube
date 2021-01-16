@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignInPage.css";
 import axios from "axios";
 
 import { GoogleLogin } from "react-google-login";
 
 const SignInPage: React.FC = () => {
+  const [channelName, setChannelName] = useState<string>("");
+
   const responseGoogle = (res: any) => {
     console.log(res);
 
@@ -17,6 +19,7 @@ const SignInPage: React.FC = () => {
         name: name,
         email: email,
         googleId: googleId,
+        channelName: channelName,
       })
       .then((response) => {
         console.log("success!!!");
@@ -31,9 +34,16 @@ const SignInPage: React.FC = () => {
         </div>
 
         <div className="body">
+          <input
+            type="text"
+            placeholder="Channel name..."
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+              setChannelName(event.target.value)
+            }
+          />
           <GoogleLogin
             clientId="597764444042-sbpkrsr5mh8glt7t3qma0hl6ps4l64b5.apps.googleusercontent.com"
-            buttonText="SignIn"
+            buttonText="Sign In"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
             cookiePolicy={"single_host_origin"}
