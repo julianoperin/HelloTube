@@ -30,6 +30,14 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true,
       },
     },
+    profilePictureUrl: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        notEmpty: true,
+      },
+    },
   });
 
   return User;
