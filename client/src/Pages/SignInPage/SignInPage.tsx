@@ -25,8 +25,10 @@ const SignInPage: React.FC = () => {
         imageUrl: imageUrl,
       })
       .then((response) => {
-        console.log("success!!!");
-        console.log("response:", response);
+        sessionStorage.setItem("loggedIn", "true");
+        sessionStorage.setItem("name", name);
+        sessionStorage.setItem("imageUrl", imageUrl);
+        sessionStorage.setItem("googleId", googleId);
       });
   };
 
@@ -35,23 +37,39 @@ const SignInPage: React.FC = () => {
       <div className="container-signIn">
         {signInOption === "" ? (
           <div className="body">
-            <button className="btn-create-account">Create Account</button>
-            <button className="btn-sign-in">Sign In</button>
+            <button
+              className="btn-create-account"
+              onClick={() => setSignInOption("create")}
+            >
+              Create Account
+            </button>
+            <button
+              className="btn-sign-in"
+              onClick={() => setSignInOption("sign in")}
+            >
+              Sign In
+            </button>
           </div>
         ) : (
           <>
             <div className="top">
-              <h2>Sign In with Google</h2>
+              <h1>
+                {signInOption === "create" ? "Create Account" : "Sign In"} With
+                Google
+              </h1>
             </div>
 
             <div className="body">
-              <input
-                type="text"
-                placeholder="Channel name..."
-                onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                  setChannelName(event.target.value)
-                }
-              />
+              {signInOption === "create" && (
+                <input
+                  type="text"
+                  placeholder="Channel name..."
+                  onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                    setChannelName(event.target.value)
+                  }
+                />
+              )}
+
               <GoogleLogin
                 clientId="597764444042-sbpkrsr5mh8glt7t3qma0hl6ps4l64b5.apps.googleusercontent.com"
                 buttonText="Sign In"

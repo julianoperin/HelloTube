@@ -63,6 +63,7 @@ h1 {
   border-right: none;
   padding: 0.4rem;
   font-size: 1rem;
+  border: lightgray solid 1px;
 }
 
 .navbarContainer .center .btn-search {
@@ -70,6 +71,11 @@ h1 {
   padding: 0.7rem 1.5rem;
   cursor: pointer;
   background: #f5f5f5;
+  border: lightgray solid 1px;
+}
+
+.navbarContainer .center .btn-search:hover {
+  background: #eceaea;
 }
 
 input:focus,

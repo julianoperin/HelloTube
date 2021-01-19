@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 
 import { FaYoutube } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiVideoPlus } from "react-icons/bi";
+import { url } from "inspector";
 
 const Navbar: React.FC = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState<boolean>(false);
+  const [profilePicture, setProfilePicture] = useState<string>("");
+
+  useEffect(() => {
+    if (sessionStorage.getItem("loggedIn") === "true") {
+      setLoggedIn(true);
+      setProfilePicture(sessionStorage.getItem("imageUrl") as string);
+    }
+  }, [sessionStorage.getItem("loggedIn")]);
 
   return (
     <div className="navbarContainer">
@@ -29,7 +38,7 @@ const Navbar: React.FC = () => {
           <BiVideoPlus />
         </button>
         {loggedIn ? (
-          <button className="profile-pic"></button>
+          <img className="profile-pic" src={profilePicture} />
         ) : (
           <button
             className="signIn-btn"
