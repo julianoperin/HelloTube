@@ -4,7 +4,7 @@ import "./Navbar.css";
 import { FaYoutube } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { MdAddToQueue } from "react-icons/md";
+import { BiVideoPlus } from "react-icons/bi";
 
 const Navbar: React.FC = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -26,12 +26,19 @@ const Navbar: React.FC = () => {
       </div>
       <div className="right">
         <button className="create-video">
-          <MdAddToQueue />
+          <BiVideoPlus />
         </button>
         {loggedIn ? (
           <button className="profile-pic"></button>
         ) : (
-          <button className="signIn-btn">Sign In</button>
+          <button
+            className="signIn-btn"
+            onClick={() => {
+              window.location.pathname = "/signin";
+            }}
+          >
+            Sign In
+          </button>
         )}
       </div>
     </div>

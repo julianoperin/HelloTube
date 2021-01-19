@@ -5,6 +5,7 @@
   height: 100%;
   display: flex;
   flex-direction: row;
+  min-height: 7vh;
 }
 
 .navbarContainer .left {
@@ -47,6 +48,7 @@ h1 {
   color: #111;
   margin: 0 0.3rem;
 }
+
 /* CEnter */
 
 .navbarContainer .center {

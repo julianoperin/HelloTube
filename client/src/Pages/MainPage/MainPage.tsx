@@ -6,9 +6,6 @@ import "./MainPage.css";
 const MainPage = () => {
   return (
     <div className="MainPage">
-      <div className="top">
-        <Navbar />
-      </div>
       <div className="center">
         <Sidebar />
         <div className="videoView"></div>
