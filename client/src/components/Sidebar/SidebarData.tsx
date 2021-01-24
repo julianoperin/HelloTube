@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGripfire } from "react-icons/fa";
 import { AiFillHome } from "react-icons/ai";
-import { ImYoutube2 } from "react-icons/ai";
+// import { FiYoutube } from "react-icons/fi";
 
 export const SidebarData = [
   {
@@ -17,6 +17,6 @@ export const SidebarData = [
   {
     title: "Subscription",
     path: "/subscription",
-    icon: <ImYoutube2 />,
+    // icon: <FiYoutube />,
   },
 ];
