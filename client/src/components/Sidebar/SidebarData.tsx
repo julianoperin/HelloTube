@@ -19,4 +19,14 @@ export const SidebarData = [
     path: "/subscription",
     // icon: <FiYoutube />,
   },
+  {
+    title: "Premium",
+    path: "/subscription",
+    // icon: <FiYoutube />,
+  },
+  {
+    title: "Favorites",
+    path: "/subscription",
+    // icon: <FiYoutube />,
+  },
 ];
