@@ -5,9 +5,23 @@
 .sidebarRows .row {
   width: 100%;
   height: 50px;
-
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  cursor: pointer;
+}
+.sidebarRows .row:hover {
+  background: rgb(212, 210, 210);
+}
+
+.iconContainer {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+}
+
+.titleContainer {
+  flex: 70%;
 }
