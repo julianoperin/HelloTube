@@ -1,0 +1,17 @@
+.AccountPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+}
+
+.AccountPage .Container {
+  height: 100%;
+  width: 70%;
+}
+
+.AccountPage .Container .TitleContainer {
+  text-align: center;
+  margin-top: 2rem;
+}

@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "./SignInPage.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 import { GoogleLogin } from "react-google-login";
 
 const SignInPage: React.FC = () => {
   const [channelName, setChannelName] = useState<string>("");
   const [signInOption, setSignInOption] = useState<string>("");
+
+  let history = useHistory();
 
   const responseGoogle = (res: any) => {
     const name = res.profileObj.name;
@@ -29,6 +32,7 @@ const SignInPage: React.FC = () => {
         sessionStorage.setItem("name", name);
         sessionStorage.setItem("imageUrl", imageUrl);
         sessionStorage.setItem("googleId", googleId);
+        history.push("/");
       });
   };
 

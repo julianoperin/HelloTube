@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
+import "./AccountPage.css";
 
 const AccountPage: React.FC = () => {
   useEffect(() => {
@@ -9,8 +10,12 @@ const AccountPage: React.FC = () => {
     });
   }, []);
   return (
-    <div>
-      <h1>Account Page</h1>
+    <div className="AccountPage">
+      <div className="Container">
+        <div className="TitleContainer">
+          <h1>Account information</h1>
+        </div>
+      </div>
     </div>
   );
 };
