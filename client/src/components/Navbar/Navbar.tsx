@@ -24,8 +24,14 @@ const Navbar: React.FC = () => {
         <button className="btn-burger">
           <GiHamburgerMenu id="burgerIcon" />
         </button>
-        <FaYoutube id="youtubeIcon" />
-        <h1>HelloTube</h1>
+
+        <div
+          className="icon-logo"
+          onClick={() => (window.location.pathname = "/")}
+        >
+          <FaYoutube id="youtubeIcon" />
+          <h1>HelloTube</h1>
+        </div>
       </div>
       <div className="center">
         <input type="text" className="searchBar" placeholder="Search" />

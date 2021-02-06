@@ -17,7 +17,7 @@ const SignInPage: React.FC = () => {
     console.log(res);
 
     axios
-      .post("http://localhost:3001/signin", {
+      .post("http://localhost:3001/user", {
         name: name,
         email: email,
         googleId: googleId,
