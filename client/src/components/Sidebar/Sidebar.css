@@ -15,10 +15,6 @@
   background: rgb(238, 238, 238);
 }
 
-.row .active {
-  color: red;
-}
-
 #iconContainer {
   flex: 30%;
   display: grid;
@@ -28,4 +24,13 @@
 
 .titleContainer {
   flex: 70%;
+  font-weight: lighter;
+}
+
+#active {
+  background-color: rgb(240, 240, 240);
+}
+
+#active #iconContainer {
+  color: red;
 }

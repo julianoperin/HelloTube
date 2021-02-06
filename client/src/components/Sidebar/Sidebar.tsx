@@ -12,16 +12,10 @@ const Sidebar = () => {
             <li
               key={key}
               className="row"
+              id={item.path === window.location.pathname ? "active" : ""}
               onClick={() => (window.location.pathname = item.path)}
             >
-              <div
-                id="iconContainer"
-                className={
-                  item.path === window.location.pathname ? "active" : ""
-                }
-              >
-                {item.icon}
-              </div>
+              <div id="iconContainer">{item.icon}</div>
               <div className="titleContainer">
                 <h2>{item.title}</h2>
               </div>
