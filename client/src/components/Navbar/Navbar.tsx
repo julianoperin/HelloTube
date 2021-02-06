@@ -44,7 +44,11 @@ const Navbar: React.FC = () => {
           <BiVideoPlus />
         </button>
         {loggedIn ? (
-          <img className="profile-pic" src={profilePicture} />
+          <img
+            className="profile-pic"
+            src={profilePicture}
+            onClick={() => (window.location.pathname = "/account")}
+          />
         ) : (
           <button
             className="signIn-btn"
