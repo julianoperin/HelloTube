@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -8,9 +8,14 @@ import SignInPage from "./Pages/SignInPage/SignInPage";
 import Navbar from "./components/Navbar/Navbar";
 import AccountPage from "./Pages/AccountPage/AccountPage";
 
+//! Context
+import { ToggleSidebarContext } from "./Helpers/Context";
+
 function App() {
+  const [showSidebar, setShowSidebar] = useState<any>(true);
+
   return (
-    <>
+    <ToggleSidebarContext.Provider value={{ showSidebar, setShowSidebar }}>
       <div className="top">
         <Navbar />
       </div>
@@ -21,7 +26,7 @@ function App() {
           <Route exact path="/account" component={() => <AccountPage />} />
         </Switch>
       </Router>
-    </>
+    </ToggleSidebarContext.Provider>
   );
 }
 

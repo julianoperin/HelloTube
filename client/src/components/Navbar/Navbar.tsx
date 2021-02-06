@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Navbar.css";
 
 import { FaYoutube } from "react-icons/fa";
@@ -6,10 +6,12 @@ import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiVideoPlus } from "react-icons/bi";
 import { url } from "inspector";
+import { ToggleSidebarContext } from "../../Helpers/Context";
 
 const Navbar: React.FC = () => {
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
   const [profilePicture, setProfilePicture] = useState<string>("");
+  const { showSidebar, setShowSidebar } = useContext(ToggleSidebarContext);
 
   useEffect(() => {
     if (sessionStorage.getItem("loggedIn") === "true") {
@@ -21,7 +23,10 @@ const Navbar: React.FC = () => {
   return (
     <div className="navbarContainer">
       <div className="left">
-        <button className="btn-burger">
+        <button
+          className="btn-burger"
+          onClick={() => setShowSidebar(!showSidebar)}
+        >
           <GiHamburgerMenu id="burgerIcon" />
         </button>
 
