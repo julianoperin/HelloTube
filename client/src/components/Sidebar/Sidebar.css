@@ -12,10 +12,14 @@
   cursor: pointer;
 }
 .sidebarRows .row:hover {
-  background: rgb(212, 210, 210);
+  background: rgb(238, 238, 238);
 }
 
-.iconContainer {
+.row .active {
+  color: red;
+}
+
+#iconContainer {
   flex: 30%;
   display: grid;
   place-items: center;

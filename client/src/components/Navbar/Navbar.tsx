@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           <GiHamburgerMenu id="burgerIcon" />
         </button>
         <FaYoutube id="youtubeIcon" />
-        <h1>Hellotube</h1>
+        <h1>HelloTube</h1>
       </div>
       <div className="center">
         <input type="text" className="searchBar" placeholder="Search" />
