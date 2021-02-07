@@ -1,7 +1,12 @@
 import React from "react";
 
-const UploadVideoForm = () => {
-  return <div></div>;
+const UploadVideoForm: React.FC = () => {
+  return (
+    <div className="UploadVideoContainer">
+      <label htmlFor="">Title</label>
+      <input type="text" placeholder="title..." />
+    </div>
+  );
 };
 
 export default UploadVideoForm;

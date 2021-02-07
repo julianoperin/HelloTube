@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./UploadPage.css";
+import UploadVideoForm from "./UploadVideoForm";
 
 import { AiOutlineClose } from "react-icons/ai";
 // import { MdFileUpload } from "react-icons/md";
@@ -41,7 +42,7 @@ const UploadPage: React.FC = () => {
               </div>
             </>
           ) : (
-            <h1>{fileSelected}</h1>
+            <UploadVideoForm />
           )}
         </div>
       </div>
