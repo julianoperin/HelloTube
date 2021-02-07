@@ -7,6 +7,7 @@ import MainPage from "./Pages/MainPage/MainPage";
 import SignInPage from "./Pages/SignInPage/SignInPage";
 import Navbar from "./components/Navbar/Navbar";
 import AccountPage from "./Pages/AccountPage/AccountPage";
+import UploadPage from "./Pages/UploadPage/UploadPage";
 
 //! Context
 import { ToggleSidebarContext } from "./Helpers/Context";
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/" component={() => <MainPage />} />
           <Route exact path="/signin" component={() => <SignInPage />} />
           <Route exact path="/account" component={() => <AccountPage />} />
+          <Route exact path="/uploadpage" component={() => <UploadPage />} />
         </Switch>
       </Router>
     </ToggleSidebarContext.Provider>

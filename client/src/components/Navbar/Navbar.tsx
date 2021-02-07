@@ -45,7 +45,10 @@ const Navbar: React.FC = () => {
         </button>
       </div>
       <div className="right">
-        <button className="create-video">
+        <button
+          className="create-video"
+          onClick={() => (window.location.pathname = "/uploadpage")}
+        >
           <BiVideoPlus />
         </button>
         {loggedIn ? (
