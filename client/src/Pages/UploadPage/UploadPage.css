@@ -27,26 +27,44 @@
   padding: 0 1rem 0 1rem;
 }
 
-.SelectFileContainer .top-upload .leftSide {
-  /* flex: 50%;
-  height: 100%; */
-}
-
-.SelectFileContainer .top-upload .rightSide {
-  /* flex: 50%;
-  height: 100%; */
-}
-
 .SelectFileContainer .body-upload {
   flex: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.btn-upload {
+.SelectFileContainer .body-upload .uploadButton {
+  padding: 8px 10px;
+  background: #065fd4;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 0.8rem !important;
+  font-family: sans-serif;
 }
 
-.btn-upload:hover {
+.SelectFileContainer .body-upload .uploadButton label {
+  cursor: pointer;
+}
+
+.SelectFileContainer .body-upload h3 {
+  margin: 1.3rem 0 0.3rem 0;
+}
+
+.SelectFileContainer .body-upload p {
+  margin-bottom: 1rem;
+}
+
+/* Close btn */
+.btn-upload-close {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-upload-close:hover {
   color: #222;
   background: lightgray;
   border-radius: 50%;
